@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom'
 
 const ButtonContainer = () => {
   return (
-    <div>
-        <Link>Go back</Link>
-        <Button text={'Next step'}/>
+    <div className='actions flex-container sp-btwn'>
+        <p>Go Back</p>
+        <Button/>
     </div>
   )
 }

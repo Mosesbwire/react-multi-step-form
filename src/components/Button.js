@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({text}) => {
+const Button = props => {
   return (
-    <Fragment>
-      <Button>{text}</Button>
-    </Fragment>
+      <button className='btn'>Next step</button>
   )
 }
 
 Button.propTypes = {
-    text: PropTypes.string.isRequired,
+
 }
 
 export default Button

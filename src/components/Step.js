@@ -7,7 +7,7 @@ const Step = props => {
       <div className='step-circle'>
         <p>1</p>
       </div>
-      <div>
+      <div className='hidden-sm'>
         <p>Step 1</p>
         <p>Your info</p>
       </div>

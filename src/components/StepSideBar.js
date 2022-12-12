@@ -3,11 +3,13 @@ import Step from './Step'
 
 const StepSideBar = () => {
   return (
-    <div >
-      <Step/>
-      <Step/>
-      <Step/>
-      <Step/>
+    <div className='sidebar'>
+      <div className='steps flex-container'>
+        <Step/>
+        <Step/>
+        <Step/>
+        <Step/>
+      </div>
     </div>
   )
 }
