@@ -13,15 +13,17 @@ function App() {
   return (
     <Router>
       <Fragment>
-        <section>
+        <section className='main'>
           <StepSideBar/>
-          <Routes>
-            <Route path='/' element={<PersonalInfo/>}/>
-            <Route path='/plans' element={<Plans/>}/>
-            <Route path='/addons' element={<Addons/>}/>
-            <Route path='/summary' element={<Summary/>}/>
-            <Route path='/finish' element={<Thankyou/>}/>
-          </Routes>
+          <div>
+            <Routes>
+              <Route path='/' element={<PersonalInfo/>}/>
+              <Route path='/plans' element={<Plans/>}/>
+              <Route path='/addons' element={<Addons/>}/>
+              <Route path='/summary' element={<Summary/>}/>
+              <Route path='/finish' element={<Thankyou/>}/>
+            </Routes>
+          </div>
         </section>
       </Fragment>
     </Router>

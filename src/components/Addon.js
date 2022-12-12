@@ -7,10 +7,10 @@ const Addon = props => {
       <input className='checkbox' type='checkbox'/>
       <div className='flex-container addon-info'>
         <div>
-          <p>Online service</p>
-          <p>Access to multiplayer games</p>
+          <p className='blue-text addon-title'>Online service</p>
+          <p className='light-text'>Access to multiplayer games</p>
         </div>
-        <p>+$1/mo</p>
+        <p className='purple-text'>+$1/mo</p>
       </div>
     </div>
   )

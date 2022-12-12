@@ -11,27 +11,27 @@ const Summary = props => {
       <div className='summary-section'>
         <div className='flex-container sp-btwn'>
             <div>
-                <p>Arcade (Monthly)</p>
-                <Link>change</Link>
+                <p className='blue-text sb-text'>Arcade (Monthly)</p>
+                <Link className='light-text'>Change</Link>
             </div>
-            <p>$9/mo</p>
+            <p className='blue-text sb-text'>$9/mo</p>
         </div>
         <div className='addon-summary'>
           <div className='flex-container sp-btwn'>
-            <p>Online service</p>
-            <p>+$1/mo</p>
+            <p className='light-text'>Online service</p>
+            <p className='blue-text'>+$1/mo</p>
           </div>
           <div className='flex-container sp-btwn'>
-            <p>Larger storage</p>
-            <p>+$2/mo</p>
+            <p className='light-text'>Larger storage</p>
+            <p className='blue-text'>+$2/mo</p>
           </div>
         </div>
       </div>
       <div className='flex-container sp-btwn total-section'> 
-        <p>Total (per month)</p>
-        <p>+$12/mo</p>
+        <p className='light-text'>Total (per month)</p>
+        <p className='total-amount'>+$12/mo</p>
       </div>
-      <Action/>
+      <Action text={'Confirm'} btnColor={'bg-light'}/>
     </div>
   )
 }

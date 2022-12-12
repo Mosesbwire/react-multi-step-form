@@ -7,8 +7,8 @@ const Thankyou = () => {
       <div className='thanks-wrapper'>
         <div className='thanks'>
           <img src={checkmark} alt='confirmation checkmark'/>
-          <h1>Thank you!</h1>
-          <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+          <h1 className='primary-title'>Thank you!</h1>
+          <p className='light-text'>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
         </div>
       </div>
     </div>

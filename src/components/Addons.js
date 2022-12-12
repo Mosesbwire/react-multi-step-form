@@ -14,7 +14,7 @@ const Addons = props => {
         <Addon/>
         <Addon/>
       </div>
-      <Action/>
+      <Action text={'Next Step'} btnColor={'bg-dark'}/>
     </div>
   )
 }

@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const Button = props => {
+const Button = ({text, btnColor}) => {
   return (
-      <button className='btn'>Next step</button>
+      <button className={`btn ${btnColor}`}>{text}</button>
   )
 }
 
 Button.propTypes = {
-
+  text:PropTypes.string.isRequired,
+  btnColor:PropTypes.string,
 }
 
 export default Button
