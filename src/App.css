@@ -212,7 +212,8 @@ body {
 }
 
 .offer-text {
-  display: none;
+  color: var(--Marine-blue);
+  font-size: .85em;
 }
 
 .plan {
@@ -253,6 +254,10 @@ body {
   margin-left: 2px;
   border-radius: 100%;
   background-color: #FFF;
+  position: relative;
+  left: 0;
+  transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .checkbox {
@@ -282,6 +287,10 @@ body {
   border-radius: 5px;
   padding-block: 1em;
   padding-inline: 1em;
+}
+
+.change {
+  text-decoration: underline;
 }
 
 .addon-summary {
@@ -353,6 +362,7 @@ body {
   border-radius: 5px;
   font-weight: 500;
   color: var(--White);
+  cursor: pointer;
 }
 
 .bg-dark {
@@ -361,6 +371,10 @@ body {
 
 .bg-light {
   background-color: var(--Purplish-blue);
+}
+
+.back-link {
+  cursor: pointer;
 }
 
 
@@ -424,6 +438,7 @@ body {
 
   .plan {
     flex-direction: column;
+    cursor: pointer;
   }
 
   .image-container {

@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
 import StepSideBar from './components/StepSideBar';
@@ -61,6 +61,13 @@ function App() {
      
     }
   ]
+
+  const [selectedPlan, setSelectedPlan] = useState({
+    monthlyBilling: true
+  })
+
+  const [selectedAddon, setSelectedAddon] = useState([])
+
   return (
     <Router>
       <Fragment>
@@ -69,9 +76,9 @@ function App() {
           <div>
             <Routes>
               <Route path='/' element={<PersonalInfo/>}/>
-              <Route path='/plans' element={<Plans plans={plans}/>}/>
-              <Route path='/addons' element={<Addons addons={addons}/>}/>
-              <Route path='/summary' element={<Summary/>}/>
+              <Route path='/plans' element={<Plans plans={plans} setPlan={setSelectedPlan} selectedPlan={selectedPlan}/>}/>
+              <Route path='/addons' element={<Addons addons={addons} setSelectedAddon={setSelectedAddon} selectedAddon={selectedAddon} selectedPlan={selectedPlan}/>}/>
+              <Route path='/summary' element={<Summary selectedPlan={selectedPlan} selectedAddon={selectedAddon}/>}/>
               <Route path='/finish' element={<Thankyou/>}/>
             </Routes>
           </div>

@@ -22,7 +22,7 @@ const PersonalInfo = props => {
             <input type={'tel'} name='phoneNumber'/>
         </div>
       </div>
-      <Action text={'Next Step'} btnColor={'bg-dark'}/>
+      <Action text={'Next Step'} btnColor={'bg-dark'} link={'/plans'}/>
     </div>
   )
 }

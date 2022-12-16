@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Addon from './Addon'
 import Action from './Actions'
 
-const Addons = ({addons}) => {
+const Addons = ({addons, setSelectedAddon, selectedAddon, selectedPlan}) => {
   return (
     <div className='card-info'>
       <h1 className='primary-title'>Pick add-ons</h1>
@@ -11,16 +11,19 @@ const Addons = ({addons}) => {
 
       <div>
         {addons.length > 0 ? (<Fragment>
-          {addons.map((addon, index)=> (<Addon addon={addon} key={index}/>))}
+          {addons.map((addon, index)=> (<Addon addon={addon} key={index} setSelectedAddon={setSelectedAddon} selectedAddon={selectedAddon} selectedPlan={selectedPlan}/>))}
         </Fragment>): null}
       </div>
-      <Action text={'Next Step'} btnColor={'bg-dark'}/>
+      <Action text={'Next Step'} btnColor={'bg-dark'} link={'/summary'}/>
     </div>
   )
 }
 
 Addons.propTypes = {
   addons: PropTypes.array.isRequired,
+  setSelectedAddon: PropTypes.func.isRequired,
+  selectedAddon: PropTypes.array.isRequired,
+  selectedPlan: PropTypes.object.isRequired,
 }
 
 export default Addons
