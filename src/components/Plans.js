@@ -2,8 +2,34 @@ import React, {Fragment,useRef,useEffect} from 'react'
 import PropTypes from 'prop-types'
 import Plan from './Plan'
 import Action from './Actions'
+import icon_arcade from '../assets/images/icon-arcade.svg'
+import icon_pro from '../assets/images/icon-pro.svg'
+import icon_advanced from '../assets/images/icon-advanced.svg'
 
-const Plans = ({plans, setPlan, selectedPlan}) => {
+const Plans = ({setPlan, selectedPlan, setPage, page}) => {
+  const plans = [
+    {
+      name: 'Arcade',
+      monthlyRate: '9',
+      yearlyRate: '90',
+      offer: '2 months free',
+      imgUrl: icon_arcade
+    },
+    {
+      name: 'Advanced',
+      monthlyRate: '12',
+      yearlyRate: '120',
+      offer: '2 months free',
+      imgUrl: icon_advanced
+    },
+    {
+      name: 'Pro',
+      monthlyRate: '15',
+      yearlyRate: '150',
+      offer: '2 months free',
+      imgUrl: icon_pro
+    }
+  ]
   const switchBtn = useRef(null);
 
   useEffect(() => {
@@ -49,15 +75,16 @@ const Plans = ({plans, setPlan, selectedPlan}) => {
             <p>Yearly</p>
         </div>
       </div>
-      <Action text={'Next Step'} btnColor={'bg-dark'} link={'/addons'}/>
+      <Action text={'Next Step'} btnColor={'bg-dark'} setPage={setPage} page={page}/>
     </div>
   )
 }
 
 Plans.propTypes = {
-  plans: PropTypes.array.isRequired,
+
   setPlan: PropTypes.func.isRequired,
   selectedPlan: PropTypes.object.isRequired,
+
 }
 
 export default Plans

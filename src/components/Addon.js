@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 
-const Addon = ({addon, setSelectedAddon, selectedAddon, selectedPlan}) => {
+const Addon = ({addon, setSelectedAddon, selectedAddon}) => {
   const [isChecked, setIsChecked ] = useState(false)
   useEffect(() => {
 
@@ -45,7 +45,6 @@ Addon.propTypes = {
   addon: PropTypes.object.isRequired,
   setSelectedAddon: PropTypes.func.isRequired,
   selectedAddon: PropTypes.array.isRequired,
-  selectedPlan: PropTypes.object.isRequired,
 }
 
 export default Addon

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Action from './Actions'
 
-const PersonalInfo = props => {
+const PersonalInfo = ({setPage, page}) => {
   return (
     <div className='card-info'>
       <h1 className='primary-title'>Personal info</h1>
@@ -22,13 +22,14 @@ const PersonalInfo = props => {
             <input type={'tel'} name='phoneNumber'/>
         </div>
       </div>
-      <Action text={'Next Step'} btnColor={'bg-dark'} link={'/plans'}/>
+      <Action text={'Next Step'} btnColor={'bg-dark'} setPage={setPage} page={page}/>
     </div>
   )
 }
 
 PersonalInfo.propTypes = {
-
+  setPage: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
 }
 
 export default PersonalInfo

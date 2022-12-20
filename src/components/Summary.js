@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {Link } from 'react-router-dom'
 import Action from './Actions'
 
-const Summary = ({selectedPlan, selectedAddon}) => {
+const Summary = ({selectedPlan, selectedAddon, setPage, page}) => {
 
   let duration;
 
@@ -68,7 +68,7 @@ const Summary = ({selectedPlan, selectedAddon}) => {
         <p className='light-text'>Total (per {duration.full})</p>
         <p className='total-amount'>+${totalCost}</p>
       </div>
-      <Action text={'Confirm'} btnColor={'bg-light'} link={'/finish'}/>
+      <Action text={'Confirm'} btnColor={'bg-light'} setPage={setPage} page={page}/>
     </div>
   )
 }
@@ -76,6 +76,7 @@ const Summary = ({selectedPlan, selectedAddon}) => {
 Summary.propTypes = {
     selectedPlan: PropTypes.object.isRequired,
     selectedAddon: PropTypes.array,
+    
 }
 
 export default Summary
